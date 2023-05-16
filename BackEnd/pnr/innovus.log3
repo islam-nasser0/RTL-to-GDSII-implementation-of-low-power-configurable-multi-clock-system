@@ -1,0 +1,1009 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v15.20-p005_1, built Wed Nov 11 11:16:39 PST 2015
+Options:	
+Date:		Sun Aug 21 04:22:20 2022
+Host:		IC (x86_64 w/Linux 2.6.32-573.el6.x86_64) (4cores*8cpus*Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz 6144KB)
+OS:		Red Hat Enterprise Linux Server release 6.7 (Santiago)
+
+License:
+		invs	Innovus Implementation System	15.2	Denied
+		invsb	Innovus Implementation System Basic	15.2	Denied
+		fexl	First Encounter XL	15.2	checkout succeeded
+		2 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getDrawView
+<CMD> loadWorkspace -name Physical
+<CMD> win
+<CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+<CMD> set _timing_save_restore_compression_mode hybrid
+<CMD> set conf_qxconf_file NULL
+<CMD> set conf_qxlib_file NULL
+<CMD> set defHierChar /
+<CMD> set distributed_client_message_echo 1
+<CMD> set distributed_mmmc_disable_reports_auto_redirection 0
+<CMD> set gpsPrivate::dpgNewAddBufsDBUpdate 1
+<CMD> set gpsPrivate::lsgEnableNewDbApiInRestruct 1
+<CMD> set init_gnd_net VSS
+<CMD> set init_lef_file {../../../../Labs/Lab_PNR_1/std_cells/lef/tsmc13fsg_6lm_tech.lef ../../../../Labs/Lab_PNR_1/std_cells/lef/tsmc13_m_macros.lef SYS_TOP.lef}
+<CMD> set init_mmmc_file MMC.tcl
+<CMD> set init_pwr_net VDD
+<CMD> set init_top_cell SYS_TOP
+<CMD> set init_verilog ../DFT/netlists/SYS_TOP.v
+<CMD> set latch_time_borrow_mode max_borrow
+<CMD> set lsgOCPGainMult 1.000000
+<CMD> set pegDefaultResScaleFactor 1.000000
+<CMD> set pegDetailResScaleFactor 1.000000
+<CMD> set report_inactive_arcs_format {from to when arc_type sense reason}
+<CMD> set timing_library_float_precision_tol 0.000010
+<CMD> set timing_library_load_pin_cap_indices {}
+<CMD> set timing_library_write_library_to_directory {}
+<CMD> set tso_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+<CMD> init_design
+**ERROR: (TCLCMD-994):	Can not find 'analysis view' object with the name 'capture_setup_analysis_view'. This can happen when the specified name of any MMMC object is incorrectly spelled or has been removed from the running session.
+**ERROR: (TCLCMD-994):	Can not find 'analysis view' object with the name 'scan_setup_analysis_view'. This can happen when the specified name of any MMMC object is incorrectly spelled or has been removed from the running session.
+**ERROR: (TCLCMD-994):	Can not find 'analysis view' object with the name 'capture_hold_analysis_view'. This can happen when the specified name of any MMMC object is incorrectly spelled or has been removed from the running session.
+**ERROR: (TCLCMD-994):	Can not find 'analysis view' object with the name 'scan_hold_analysis_view'. This can happen when the specified name of any MMMC object is incorrectly spelled or has been removed from the running session.
+
+Loading LEF file ../../../../Labs/Lab_PNR_1/std_cells/lef/tsmc13fsg_6lm_tech.lef ...
+
+Loading LEF file ../../../../Labs/Lab_PNR_1/std_cells/lef/tsmc13_m_macros.lef ...
+Set DBUPerIGU to M2 pitch 820.
+
+Loading LEF file SYS_TOP.lef ...
+**WARN: (IMPLF-246):	The 'UNITS' attribute is only allowed to be set in the first LEF file (technology LEF). The attribute was found in this LEF file, and will be ignored.
+**ERROR: (IMPLF-40):	Macro 'SYS_TOP' references a site 'CoreSite' that has not been defined. The sites must be defined before they can be referenced from a macro. Review the LEF files specified in the init_lef_file variable to see if the site does not exist or is specified after the one that defines the macro.
+Type 'man IMPLF-40' for more detail.
+**WARN: (IMPLF-46):	Class CORE macro 'SYS_TOP' has no SITE statement defined.
+Class CORE macros require a SITE statement. The SITE ENC_CORE_0 was
+created and will be used for this macro, using height 240.6000 that
+matches the macro SIZE height, and width 0.4100 that matches the
+m2 routing pitch. Define the site explicitly in the LEF file, to
+this message in the future.
+**WARN: (IMPLF-200):	Pin 'SI[0]' in macro 'SYS_TOP' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'SI[1]' in macro 'SYS_TOP' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'SI[2]' in macro 'SYS_TOP' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'SE' in macro 'SYS_TOP' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'test_mode' in macro 'SYS_TOP' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'scan_clk' in macro 'SYS_TOP' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'scan_rst' in macro 'SYS_TOP' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'RST_N' in macro 'SYS_TOP' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'UART_CLK' in macro 'SYS_TOP' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'REF_CLK' in macro 'SYS_TOP' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'UART_RX_IN' in macro 'SYS_TOP' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'SO[0]' in macro 'SYS_TOP' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'SO[1]' in macro 'SYS_TOP' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'SO[2]' in macro 'SYS_TOP' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'UART_TX_O' in macro 'SYS_TOP' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'parity_error' in macro 'SYS_TOP' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-201):	Pin 'framing_error' in macro 'SYS_TOP' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'B' in macro 'MXI2DXLM' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'MXI2DXLM' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'B' in macro 'MXI2DX8M' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'MXI2DX8M' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'B' in macro 'MXI2DX4M' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'MXI2DX4M' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'B' in macro 'MXI2DX2M' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'MXI2DX2M' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-200):	Pin 'B' in macro 'MXI2DX1M' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPLF-201):	Pin 'Y' in macro 'HOLDX1M' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+
+viaInitial starts at Sun Aug 21 04:22:36 2022
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM1 GENERATE.
+Type 'man IMPPP-557' for more detail.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM2 GENERATE.
+Type 'man IMPPP-557' for more detail.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM3 GENERATE.
+Type 'man IMPPP-557' for more detail.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM4 GENERATE.
+Type 'man IMPPP-557' for more detail.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM5 GENERATE.
+Type 'man IMPPP-557' for more detail.
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURNM6 GENERATE.
+Type 'man IMPPP-557' for more detail.
+viaInitial ends at Sun Aug 21 04:22:36 2022
+Loading view definition file from MMC.tcl
+Reading max_library timing library '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib' ...
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX1M' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX1M' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX2M' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX2M' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX4M' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX4M' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX8M' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX8M' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHXLM' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHXLM' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX1M' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX1M' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX2M' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX2M' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX4M' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX4M' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX8M' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX8M' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFXLM' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFXLM' is not defined in the library.
+Message <TECHLIB-436> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+**WARN: (TECHLIB-302):	No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+Read 618 cells in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' 
+Reading min_library timing library '/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+Read 618 cells in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' 
+*** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.17min, fe_real=0.30min, fe_mem=547.1M) ***
+*** Begin netlist parsing (mem=547.1M) ***
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3XLM' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3XLM' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3X8M' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3X8M' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3X4M' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3X4M' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3X2M' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3X2M' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3X1M' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3X1M' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2XLM' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2XLM' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2X8M' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2X8M' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2X4M' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2X4M' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2X3M' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2X3M' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2X2M' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2X2M' is defined in LEF but not in the timing library.
+**WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Created 618 new cells from 2 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../DFT/netlists/SYS_TOP.v'
+Non-leaf cell SYS_TOP will be treated as a leaf cell.
+
+*** Memory Usage v#1 (Current mem = 547.070M, initial mem = 164.598M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=547.1M) ***
+Set top cell to SYS_TOP.
+Hooked 1236 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell SYS_TOP ...
+*** Netlist is unique.
+** info: there are 1288 modules.
+** info: there are 1676 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 588.395M, initial mem = 164.598M) ***
+**WARN: (IMPFP-3961):	The techSite 'ENC_CORE_0' has no related cells in LEF/OA library. Cannot make calculations for this site type unless cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+**WARN: (IMPEXT-2773):	The via resistance between layers M0 and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M1 and M2 is not defined in the capacitance table file. The via resistance of 1.02 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M2 and M3 is not defined in the capacitance table file. The via resistance of 1.02 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M3 and M4 is not defined in the capacitance table file. The via resistance of 1.02 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M4 and M5 is not defined in the capacitance table file. The via resistance of 1.02 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2776):	The via resistance between layers M5 and M6 is not defined in the capacitance table file. The via resistance of 0.63 Ohms defined in the LEF technology file will be used as via resistance between these layers.
+Type 'man IMPEXT-2776' for more detail.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M1 is not defined in the cap table. Therefore, the LEF value 0.117 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M2 is not defined in the cap table. Therefore, the LEF value 0.077 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M3 is not defined in the cap table. Therefore, the LEF value 0.077 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M4 is not defined in the cap table. Therefore, the LEF value 0.077 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M5 is not defined in the cap table. Therefore, the LEF value 0.077 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M6 is not defined in the cap table. Therefore, the LEF value 0.027 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+Summary of Active RC-Corners : 
+ 
+ Analysis View: func_setup_analysis_view
+    RC-Corner Name        : RCcorner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from Cap Table]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from Cap Table]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+ 
+ Analysis View: func_hold_analysis_view
+    RC-Corner Name        : RCcorner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from Cap Table]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from Cap Table]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '/home/IC/Projects/System/Backend/DFT/sdc/SYS_TOP.sdc' ...
+Current (total cpu=0:00:10.8, real=0:00:18.0, peak res=297.0M, current mem=703.5M)
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File /home/IC/Projects/System/Backend/DFT/sdc/SYS_TOP.sdc, Line 9).
+
+**WARN: (IMPCTE-290):	Could not locate cell BUFX2M in any library for view func_hold_analysis_view.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX2M in any library for view func_hold_analysis_view.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX2M in any library for view func_hold_analysis_view.
+**WARN: (IMPCTE-290):	Could not locate cell BUFX2M in any library for view func_hold_analysis_view.
+**ERROR: (TCLCMD-981):	Unsupported extra argument 'Clocks' in command 'set_clock_groups'. (File /home/IC/Projects/System/Backend/DFT/sdc/SYS_TOP.sdc, Line 26).
+
+INFO (CTE): Reading of timing constraints file /home/IC/Projects/System/Backend/DFT/sdc/SYS_TOP.sdc completed, with 1 Warnings and 1 Errors.
+WARNING (CTE-25): Line: 8 of File /home/IC/Projects/System/Backend/DFT/sdc/SYS_TOP.sdc : Skipped unsupported command: set_units
+
+
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=315.8M, current mem=722.7M)
+Current (total cpu=0:00:10.8, real=0:00:18.0, peak res=315.8M, current mem=722.7M)
+Total number of combinational cells: 433
+Total number of sequential cells: 174
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2M BUFX10M BUFX12M BUFX14M BUFX16M BUFX18M BUFX20M BUFX24M BUFX32M BUFX3M CLKBUFX1M BUFX4M BUFX5M BUFX6M BUFX8M CLKBUFX12M CLKBUFX16M CLKBUFX20M CLKBUFX24M CLKBUFX2M CLKBUFX3M CLKBUFX32M CLKBUFX40M CLKBUFX4M CLKBUFX6M CLKBUFX8M
+Total number of usable buffers: 26
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1M CLKINVX12M CLKINVX16M CLKINVX20M CLKINVX24M CLKINVX2M CLKINVX3M CLKINVX32M CLKINVX40M CLKINVX4M CLKINVX6M CLKINVX8M INVX10M INVX12M INVX14M INVX16M INVX18M INVX2M INVX1M INVX20M INVX24M INVX32M INVX4M INVX3M INVX5M INVXLM INVX6M INVX8M
+Total number of usable inverters: 28
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1M DLY1X4M DLY2X1M DLY2X4M DLY3X1M DLY3X4M DLY4X1M DLY4X4M
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+**WARN: (IMPSYC-2):	Timing information is not defined for cell SYS_TOP; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+Type 'man IMPSYC-2' for more detail.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPLF-40             1  Macro '%s' references a site '%s' that h...
+WARNING   IMPLF-46             1  Class CORE macro '%s' has no SITE statem...
+WARNING   IMPLF-200           22  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPLF-201            7  Pin '%s' in macro '%s' has no ANTENNADIF...
+WARNING   IMPLF-246            1  The '%s' attribute is only allowed to be...
+WARNING   IMPFP-3961           1  The techSite '%s' has no related cells i...
+WARNING   IMPEXT-2766          6  The sheet resistance for layer %s is not...
+WARNING   IMPEXT-2773          1  The via resistance between layers %s and...
+WARNING   IMPEXT-2776          5  The via resistance between layers %s and...
+WARNING   IMPSYC-2             1  Timing information is not defined for ce...
+WARNING   IMPVL-159         1236  Pin '%s' of cell '%s' is defined in LEF ...
+WARNING   IMPPP-557            6  A single-layer VIARULE GENERATE for turn...
+WARNING   IMPCTE-290           4  Could not locate cell %s in any library ...
+*** Message Summary: 1291 warning(s), 1 error(s)
+
+invalid command name ". floorplan.tcl"
+<CMD> floorPlan -d 240.47 160 0.0 0.0 0.0 0.0
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> globalNetConnect VDD -type pgpin -pin VDD -inst *
+<CMD> globalNetConnect VSS -type pgpin -pin VSS -inst *
+<CMD> fit
+<CMD> set sprCreateIeRingNets {}
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingWidth 1.0
+<CMD> set sprCreateIeRingSpacing 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> addRing -skip_via_on_wire_shape Noshape -skip_via_on_pin Standardcell -stacked_via_top_layer METAL6 -type core_rings -jog_distance 0.205 -threshold 0.205 -nets {} -follow core -stacked_via_bottom_layer METAL1 -layer {bottom METAL1 top METAL1 right METAL2 left METAL2} -width 1 -spacing 0.5 -offset 0.25
+
+**ERROR: Error: Invalid net names specified. 
+*** Ending Ring Generation (totcpu: 0:00:00.0,real: 0:00:00.0, mem: 878.2M) ***
+<CMD> addRing -skip_via_on_wire_shape Noshape -skip_via_on_pin Standardcell -stacked_via_top_layer METAL6 -type core_rings -jog_distance 0.205 -threshold 0.205 -nets {} -follow io -stacked_via_bottom_layer METAL1 -layer {bottom METAL1 top METAL1 right METAL2 left METAL2} -width 1 -spacing 0.5 -offset 0.25
+
+The power planner will calculate offsets from I/O rows.
+**ERROR: Error: Invalid net names specified. 
+*** Ending Ring Generation (totcpu: 0:00:00.0,real: 0:00:00.0, mem: 878.2M) ***
+<CMD> addRing -skip_via_on_wire_shape Noshape -skip_via_on_pin Standardcell -stacked_via_top_layer METAL6 -type core_rings -jog_distance 0.205 -threshold 0.205 -nets {VDD VSS} -follow io -stacked_via_bottom_layer METAL1 -layer {bottom METAL1 top METAL1 right METAL2 left METAL2} -width 1 -spacing 0.5 -offset 0.25
+
+The power planner will calculate offsets from I/O rows.
+The power planner created 8 wires.
+<CMD_INTERNAL> editPushUndo
+*** Ending Ring Generation (totcpu: 0:00:00.0,real: 0:00:00.0, mem: 878.2M) ***
+<CMD> set sprCreateIeStripeNets {}
+<CMD> set sprCreateIeStripeLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeSpacing 2.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> addStripe -skip_via_on_wire_shape Noshape -block_ring_top_layer_limit METAL5 -max_same_layer_jog_length 0.8 -padcore_ring_bottom_layer_limit METAL3 -set_to_set_distance 30 -skip_via_on_pin Standardcell -stacked_via_top_layer METAL6 -padcore_ring_top_layer_limit METAL5 -spacing 0.5 -merge_stripes_value 0.205 -layer METAL4 -block_ring_bottom_layer_limit METAL3 -width 1 -stacked_via_bottom_layer METAL1
+
+Starting stripe generation ...
+Non-Default setAddStripeOption Settings :
+  NONE
+**WARN: (IMPPP-354):	The power planner did not generate vertical stripe at 0.50 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+**WARN: (IMPPP-354):	The power planner did not generate vertical stripe at 2.00 either because the stripe is merged with rings, or because stripe could not be connected to any legal targets, or because stripe is blocked by different net geometry.
+Stripe generation is complete; vias are now being generated.
+The power planner created 14 wires.
+<CMD_INTERNAL> editPushUndo
+*** Ending Stripe Generation (totcpu: 0:00:00.0,real: 0:00:00.0, mem: 882.2M) ***
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> getCTSMode -engine -quiet
+<CMD> sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { METAL1 METAL6 } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { METAL1 METAL6 } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { METAL1 METAL6 }
+*** Begin SPECIAL ROUTE on Sun Aug 21 04:25:47 2022 ***
+SPECIAL ROUTE ran on directory: /home/IC/Projects/System/Backend/pnr
+SPECIAL ROUTE ran on machine: IC (Linux 2.6.32-573.el6.x86_64 x86_64 1.80Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSpecial set to true
+srouteBlockPin set to "useLef"
+srouteBottomLayerLimit set to 1
+srouteBottomTargetLayerLimit set to 1
+srouteConnectConverterPin set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 6
+srouteFloatingStripeTarget set to "blockring padring ring stripe ringpin blockpin followpin"
+srouteFollowCorePinEnd set to 3
+srouteJogControl set to "preferWithChanges differentLayer"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteTopLayerLimit set to 6
+srouteTopTargetLayerLimit set to 6
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 1475.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+Read in 12 layers, 6 routing layers, 1 overlap layer
+Read in 632 macros, 158 used
+Read in 157 components
+  157 core components: 157 unplaced, 0 placed, 0 fixed
+Read in 16 physical pins
+  16 physical pins: 0 unplaced, 0 placed, 16 fixed
+Read in 16 nets
+Read in 2 special nets, 2 routed
+Read in 330 terminals
+Begin power routing ...
+**WARN: (IMPSR-1254):	Cannot find any block pin of net VDD. Check netlist, or change option to include the pin.
+**WARN: (IMPSR-1256):	Cannot find any CORE class pad pin of net VDD. Change routing area or layer to include the expected pin, or check netlist, or change port class in the technology file.
+Type 'man IMPSR-1256' for more detail.
+Cannot find any AREAIO class pad pin of net VDD. Check net list, or change port class in the technology file, or change option to include pin in given range.
+**WARN: (IMPSR-1254):	Cannot find any block pin of net VSS. Check netlist, or change option to include the pin.
+**WARN: (IMPSR-1256):	Cannot find any CORE class pad pin of net VSS. Change routing area or layer to include the expected pin, or check netlist, or change port class in the technology file.
+Type 'man IMPSR-1256' for more detail.
+Cannot find any AREAIO class pad pin of net VSS. Check net list, or change port class in the technology file, or change option to include pin in given range.
+CPU time for FollowPin 0 seconds
+CPU time for FollowPin 0 seconds
+  Number of IO ports routed: 0
+  Number of Block ports routed: 0
+  Number of Stripe ports routed: 0
+  Number of Core ports routed: 0
+  Number of Pad ports routed: 0
+  Number of Power Bump ports routed: 0
+  Number of Followpin connections: 56
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 1489.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 53 via definition ...
+ Updating DB with 16 io pins ...Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+
+
+sroute post-processing starts at Sun Aug 21 04:25:47 2022
+The viaGen is rebuilding shadow vias for net VSS.
+sroute post-processing ends at Sun Aug 21 04:25:47 2022
+
+sroute post-processing starts at Sun Aug 21 04:25:47 2022
+The viaGen is rebuilding shadow vias for net VDD.
+sroute post-processing ends at Sun Aug 21 04:25:47 2022
+sroute: Total CPU time used = 0:0:0
+sroute: Total Real time used = 0:0:0
+sroute: Total Memory used = 12.80 megs
+sroute: Total Peak Memory used = 897.02 megs
+<CMD> selectWire 0.0000 63.0100 240.6700 63.2700 1 VDD
+<CMD> deselectAll
+<CMD> zoomBox 79.447 -19.616 133.502 25.201
+<CMD> zoomBox 104.730 -3.387 113.125 7.651
+<CMD> selectWire 0.0000 2.7400 240.6700 3.0000 1 VSS
+<CMD> deselectAll
+<CMD> selectWire 0.0000 -0.1300 240.6700 0.1300 1 VDD
+<CMD> deselectAll
+<CMD> selectWire 0.2500 0.2500 240.4200 1.2500 1 VDD
+<CMD> deselectAll
+<CMD> selectWire 0.0000 -0.1300 240.6700 0.1300 1 VDD
+<CMD> deleteSelectedFromFPlan
+<CMD> fit
+<CMD> setDrawView ameba
+<CMD> setDrawView fplan
+<CMD> zoomBox 138.123 -33.014 157.528 24.739
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> uiSetTool obstruct
+<CMD> createPlaceBlockage -box -0.080 -4.502 245.851 5.592
+<CMD> uiSetTool select
+<CMD> uiSetTool obstruct
+<CMD> uiSetTool select
+<CMD> zoomBox -2.473 160.491 5.852 155.184
+<CMD> uiSetTool obstruct
+<CMD> windowSelect -0.526 160.257 0.273 5.379
+<CMD> deselectAll
+<CMD> selectWire 0.2500 0.2500 1.2500 159.6500 2 VDD
+<CMD> deselectAll
+<CMD> selectObstruct 0.0000 0.0000 240.6700 5.7400 defScreenName
+<CMD> deselectAll
+<CMD> windowSelect -0.046 5.263 0.230 159.995
+<CMD> uiSetTool obstruct
+<CMD> windowSelect -0.134 159.893 0.404 158.266
+<CMD> selectWire 0.2500 0.2500 1.2500 159.6500 2 VDD
+<CMD> deselectAll
+<CMD> setDrawView fplan
+<CMD> setDrawView fplan
+<CMD> uiSetTool obstruct
+<CMD> windowSelect -0.003 159.849 0.360 158.352
+<CMD> selectWire 0.2500 0.2500 1.2500 159.6500 2 VDD
+<CMD> deselectAll
+<CMD> setDrawView ameba
+<CMD> setDrawView ameba
+<CMD> setDrawView fplan
+<CMD> setDrawView fplan
+<CMD> windowSelect -0.163 160.125 0.244 158.149
+<CMD> uiSetTool obstruct
+<CMD> windowSelect -0.250 159.879 0.055 158.106
+<CMD> windowSelect 0.070 159.995 0.259 156.566
+<CMD> fit
+<CMD> zoomBox 178.319 -22.387 217.128 33.979
+<CMD> selectObstruct 0.0000 0.0000 240.6700 5.7400 defScreenName
+<CMD> fit
+<CMD> zoomBox -0.021 -17.306 28.162 43.681
+<CMD> setDrawView fplan
+<CMD> setDrawView fplan
+<CMD> setDrawView fplan
+<CMD> setDrawView fplan
+<CMD> setDrawView ameba
+<CMD> setDrawView ameba
+<CMD> setDrawView fplan
+<CMD> setDrawView fplan
+<CMD> uiSetTool obstruct
+<CMD> deselectAll
+<CMD> zoomBox -0.050 -2.361 6.324 2.583
+<CMD> fit
+<CMD> windowSelect -2.523 -4.821 3.031 163.134
+<CMD> deselectAll
+<CMD> windowSelect 0.915 -1.911 19.430 43.582
+<CMD> zoomBox 0.915 -5.615 14.668 37.234
+<CMD> windowSelect -0.617 -2.329 0.800 21.834
+<CMD> windowSelect 0.156 -2.200 1.252 27.375
+<CMD> deselectAll
+<CMD> uiSetTool obstruct
+<CMD> windowSelect 3.752 6.015 3.313 24.144
+<CMD> windowSelect 4.793 5.960 -0.028 23.486
+<CMD> deselectAll
+<CMD> windowSelect -131.771 143.356 -138.410 146.306
+<CMD> uiSetTool select
+<CMD> uiSetTool select
+<CMD> uiSetTool obstruct
+<CMD> uiSetTool obstruct
+<CMD> createPlaceBlockage -box 0.501 93.576 9.069 158.928
+<CMD> deleteSelectedFromFPlan
+<CMD> createPlaceBlockage -box 7.181 136.418 8.053 137.725
+<CMD> deleteSelectedFromFPlan
+<CMD> createPlaceBlockage -box -8.504 128.430 3.986 141.210
+<CMD> deleteSelectedFromFPlan
+<CMD> createPlaceBlockage -box 5.003 121.169 12.119 128.140
+<CMD> deleteSelectedFromFPlan
+<CMD> uiSetTool select
+<CMD> selectObstruct 4.9200 120.5400 12.3000 129.1500 defScreenName
+<CMD> deleteSelectedFromFPlan
+<CMD> selectObstruct 0.4100 91.8400 9.4300 157.8500 defScreenName
+<CMD> deleteSelectedFromFPlan
+<CMD> selectObstruct 0.0000 126.2800 4.1000 143.5000 defScreenName
+<CMD> deleteSelectedFromFPlan
+<CMD> selectObstruct 6.9700 134.8900 8.2000 137.7600 defScreenName
+<CMD> deleteSelectedFromFPlan
+<CMD> zoomBox -13.296 165.608 8.053 152.393
+<CMD> uiSetTool obstruct
+<CMD> uiSetTool obstruct
+<CMD> createPlaceBlockage -box -0.386 5.676 0.290 160.143
+<CMD> fit
+<CMD> zoomBox 0.650 161.547 30.274 148.852
+<CMD> uiSetTool select
+<CMD> panPage -1 0
+<CMD> uiSetTool obstruct
+<CMD> uiSetTool obstruct
+<CMD> uiSetTool select
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> windowSelect 0.030 160.214 0.030 153.742
+<CMD> windowSelect -1.169 160.327 0.485 159.483
+<CMD> selectWire 0.2500 0.2500 1.2500 159.6500 2 VDD
+<CMD> deselectAll
+<CMD> selectWire 0.2500 0.2500 1.2500 159.6500 2 VDD
+<CMD> deselectAll
+<CMD> windowSelect -0.586 159.905 2.659 158.381
+<CMD> deselectAll
+<CMD> selectWire 0.2500 158.6500 240.4200 159.6500 1 VDD
+<CMD> zoomBox -0.716 160.002 0.809 159.387
+<CMD> fit
+<CMD> zoomBox -0.936 161.018 7.527 155.728
+<CMD> uiSetTool sizeBlkg
+<CMD> addSizeBlockage -box -0.248 157.868 240.782 159.905
+<CMD> addSizeBlockage -box 240.441 158.218 241.045 158.775
+<CMD> uiSetTool select
+<CMD> deselectAll
+<CMD> selectObject SizeBlkg defSizeBlkgName_1
+<CMD> deleteSelectedFromFPlan
+<CMD> uiSetTool obstruct
+<CMD> uiSetTool obstruct
+<CMD> createPlaceBlockage -box 240.317 136.933 241.119 159.992
+<CMD> uiSetTool select
+<CMD> selectObstruct 240.2600 134.8900 240.6700 157.8500 defScreenName
+<CMD> deleteSelectedFromFPlan
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 -1
+<CMD> panPage 0 1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> uiSetTool obstruct
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 -1
+<CMD> panPage 0 1
+<CMD> panPage 0 -1
+<CMD> panPage 0 1
+<CMD> createPlaceBlockage -box 240.543 5.719 240.776 159.839
+<CMD> zoomIn
+<CMD> zoomIn
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 0 -1
+<CMD> panPage 0 -1
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> panPage 0 1
+<CMD> createPlaceBlockage -box 1.103 60.356 1.427 61.120
+<CMD> uiSetTool select
+<CMD> selectWire 0.2500 0.2500 1.2500 159.6500 2 VDD
+<CMD> deselectAll
+<CMD> selectObstruct 0.8200 60.2700 1.6400 63.1400 defScreenName
+<CMD> deleteSelectedFromFPlan

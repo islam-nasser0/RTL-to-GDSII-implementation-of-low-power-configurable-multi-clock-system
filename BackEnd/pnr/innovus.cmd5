@@ -1,0 +1,52 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Mon Aug 29 00:40:15 2022                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v15.20-p005_1 (64bit) 11/11/2015 11:16 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 15.20-p005_1 NR151028-1715/15_20-UB (database version 2.30, 298.6.1) {superthreading v1.26}
+#@(#)CDS: AAE 15.20-p002 (64bit) 11/11/2015 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 15.20-p001_1 () Oct 29 2015 01:50:39 ( )
+#@(#)CDS: SYNTECH 15.20-b002_1 () Oct 20 2015 02:35:29 ( )
+#@(#)CDS: CPE v15.20-p002
+#@(#)CDS: IQRC/TQRC 15.1.2-s269 (64bit) Mon Aug 24 18:22:18 PDT 2015 (Linux 2.6.18-194.el5)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getDrawView
+loadWorkspace -name Physical
+win
+set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+set _timing_save_restore_compression_mode hybrid
+set conf_qxconf_file NULL
+set conf_qxlib_file NULL
+set defHierChar /
+set distributed_client_message_echo 1
+set distributed_mmmc_disable_reports_auto_redirection 0
+set gpsPrivate::dpgNewAddBufsDBUpdate 1
+set gpsPrivate::lsgEnableNewDbApiInRestruct 1
+set init_gnd_net VSS
+set init_lef_file {../../../../Labs/Lab_PNR_1/std_cells/lef/tsmc13fsg_6lm_tech.lef ../../../../Labs/Lab_PNR_1/std_cells/lef/tsmc13_m_macros.lef SYS_TOP.lef}
+set init_mmmc_file MMC.tcl
+set init_pwr_net VDD
+set init_top_cell SYS_TOP
+set init_verilog ../DFT/netlists/SYS_TOP.v
+set latch_time_borrow_mode max_borrow
+set lsgOCPGainMult 1.000000
+set pegDefaultResScaleFactor 1.000000
+set pegDetailResScaleFactor 1.000000
+set report_inactive_arcs_format {from to when arc_type sense reason}
+set timing_library_float_precision_tol 0.000010
+set timing_library_load_pin_cap_indices {}
+set timing_library_write_library_to_directory {}
+set tso_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+init_design
+fit
+fit
+fit
+floorPlan -d 240.47 160 0.0 0.0 0.0 0.0
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+fit

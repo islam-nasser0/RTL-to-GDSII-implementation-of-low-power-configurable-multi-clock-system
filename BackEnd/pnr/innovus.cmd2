@@ -1,0 +1,342 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Sun Aug 21 04:00:12 2022                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v15.20-p005_1 (64bit) 11/11/2015 11:16 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 15.20-p005_1 NR151028-1715/15_20-UB (database version 2.30, 298.6.1) {superthreading v1.26}
+#@(#)CDS: AAE 15.20-p002 (64bit) 11/11/2015 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 15.20-p001_1 () Oct 29 2015 01:50:39 ( )
+#@(#)CDS: SYNTECH 15.20-b002_1 () Oct 20 2015 02:35:29 ( )
+#@(#)CDS: CPE v15.20-p002
+#@(#)CDS: IQRC/TQRC 15.1.2-s269 (64bit) Mon Aug 24 18:22:18 PDT 2015 (Linux 2.6.18-194.el5)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getDrawView
+loadWorkspace -name Physical
+win
+set init_gnd_net VSS
+set init_lef_file {../../../../Labs/Lab_PNR_1/std_cells/lef/tsmc13fsg_6lm_tech.lef ../../../../Labs/Lab_PNR_1/std_cells/lef/tsmc13_m_macros.lef SYS_TOP.lef}
+set init_verilog ../DFT/netlists/SYS_TOP.v
+set init_mmmc_file MMC.tcl
+set init_top_cell SYS_TOP
+set init_pwr_net VDD
+init_design
+set init_gnd_net VSS
+set init_lef_file {../../../../Labs/Lab_PNR_1/std_cells/lef/tsmc13fsg_6lm_tech.lef ../../../../Labs/Lab_PNR_1/std_cells/lef/tsmc13_m_macros.lef SYS_TOP.lef}
+set init_verilog ../DFT/netlists/SYS_TOP.v
+set init_mmmc_file MMC.tcl
+set init_top_cell SYS_TOP
+set init_pwr_net VDD
+init_design
+fit
+floorPlan -d 240.47 160 0.0 0.0 0.0 0.0
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+set sprCreateIeRingNets {}
+set sprCreateIeRingLayers {}
+set sprCreateIeRingWidth 1.0
+set sprCreateIeRingSpacing 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+addRing -skip_via_on_wire_shape Noshape -skip_via_on_pin Standardcell -stacked_via_top_layer METAL6 -type core_rings -jog_distance 0.205 -threshold 0.205 -follow core -stacked_via_bottom_layer METAL1 -layer {bottom METAL5 top METAL5 right METAL4 left METAL4} -width 1 -spacing 0.5 -offset 0.25
+addRing -skip_via_on_wire_shape Noshape -skip_via_on_pin Standardcell -stacked_via_top_layer METAL6 -type core_rings -jog_distance 0.205 -threshold 0.205 -follow io -stacked_via_bottom_layer METAL1 -layer {bottom METAL5 top METAL5 right METAL4 left METAL4} -width 1 -spacing 0.5 -offset 0.25
+editPushUndo
+fit
+zoomBox 50.339 169.812 97.003 136.547
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+panPage 0 -1
+windowSelect 48.188 11.869 72.049 -18.416
+zoomBox 70.764 -9.422 54.062 10.034
+fit
+set sprCreateIeStripeNets {}
+set sprCreateIeStripeLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeSpacing 2.0
+set sprCreateIeStripeThreshold 1.0
+addStripe -skip_via_on_wire_shape Noshape -block_ring_top_layer_limit METAL5 -max_same_layer_jog_length 0.8 -padcore_ring_bottom_layer_limit METAL3 -set_to_set_distance 30 -skip_via_on_pin Standardcell -stacked_via_top_layer METAL6 -padcore_ring_top_layer_limit METAL5 -spacing 0.5 -merge_stripes_value 0.205 -layer METAL4 -block_ring_bottom_layer_limit METAL3 -width 1 -stacked_via_bottom_layer METAL1
+editPushUndo
+selectWire 1.7500 1.7500 238.9200 2.7500 5 VSS
+deselectAll
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { METAL1 METAL6 } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { METAL1 METAL6 } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { METAL1 METAL6 }
+verifyConnectivity -type all -error 1000 -warning 50
+setVerifyGeometryMode -area { 0 0 0 0 } -minWidth true -minSpacing true -minArea false -sameNet true -short true -overlap true -offRGrid false -offMGrid true -mergedMGridCheck true -minHole true -implantCheck true -minimumCut true -minStep true -viaEnclosure true -antenna false -insuffMetalOverlap true -pinInBlkg false -diffCellViol true -sameCellViol false -padFillerCellsOverlap true -routingBlkgPinOverlap true -routingCellBlkgOverlap true -regRoutingOnly false -stackedViasOnRegNet false -wireExt true -useNonDefaultSpacing false -maxWidth true -maxNonPrefLength -1 -error 1000
+verifyGeometry
+setVerifyGeometryMode -area { 0 0 0 0 }
+windowSelect 118.256 -19.616 135.351 21.966
+zoomBox 112.249 -8.989 139.971 25.663
+zoomBox 120.210 -2.995 121.895 5.372
+deselectAll
+selectMarker 0.0000 -0.1300 240.6700 0.1300 -1 3 7
+deselectAll
+selectMarker 0.0000 -0.1300 240.6700 0.1300 -1 3 7
+deselectAll
+selectMarker 0.0000 -0.1300 240.6700 0.1300 -1 3 7
+deselectAll
+selectMarker 0.0000 -0.1300 240.6700 0.1300 -1 3 7
+deselectAll
+selectMarker 0.0000 -0.1300 240.6700 0.1300 -1 3 7
+deleteSelectedFromFPlan
+selectWire 0.0000 -0.1300 240.6700 0.1300 1 VDD
+deleteSelectedFromFPlan
+fit
+selectMarker 0.0000 0.2500 240.6700 159.6500 -1 3 7
+deselectAll
+selectMarker 0.0000 0.2500 240.6700 159.6500 -1 3 7
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+setDrawView fplan
+uiSetTool obstruct
+fit
+createPlaceBlockage -box -0.632 -1.685 247.717 1.733
+createPlaceBlockage -box 7.782 2.259 20.402 3.100
+deleteSelectedFromFPlan
+createPlaceBlockage -box 18.035 3.626 18.824 4.678
+deleteSelectedFromFPlan
+zoomBox 8.834 -12.675 22.505 22.819
+uiSetTool select
+uiSetTool select
+uiSetTool select
+selectObstruct 7.3800 0.0000 20.5000 5.7400 defScreenName
+deselectAll
+selectObstruct 7.3800 0.0000 20.5000 5.7400 defScreenName
+deselectAll
+selectObstruct 7.3800 0.0000 20.5000 5.7400 defScreenName
+deselectAll
+selectObstruct 7.3800 0.0000 20.5000 5.7400 defScreenName
+deselectAll
+selectObstruct 7.3800 0.0000 20.5000 5.7400 defScreenName
+deselectAll
+selectObstruct 7.3800 0.0000 20.5000 5.7400 defScreenName
+deselectAll
+selectObstruct 7.3800 0.0000 20.5000 5.7400 defScreenName
+deselectAll
+selectObstruct 17.6300 2.8700 18.8600 5.7400 defScreenName
+deleteSelectedFromFPlan
+selectObstruct 7.3800 0.0000 20.5000 5.7400 defScreenName
+deleteSelectedFromFPlan
+selectWire 1.7500 1.7500 238.9200 2.7500 5 VSS
+deselectAll
+selectWire 0.2500 0.2500 240.4200 1.2500 5 VDD
+deselectAll
+selectWire 1.7500 1.7500 238.9200 2.7500 5 VSS
+deleteSelectedFromFPlan
+selectObstruct 0.0000 0.0000 240.6700 2.8700 defScreenName
+deleteSelectedFromFPlan
+windowSelect 3.400 0.057 8.345 0.057
+undo
+undo
+undo
+undo
+undo
+selectObstruct 7.3800 0.0000 20.5000 5.7400 defScreenName
+deleteSelectedFromFPlan
+selectObstruct 17.6300 2.8700 18.8600 5.7400 defScreenName
+deleteSelectedFromFPlan
+selectObstruct 0.0000 0.0000 240.6700 2.8700 defScreenName
+deleteSelectedFromFPlan
+selectWire 0.0000 -0.1300 240.6700 0.1300 1 VDD
+deselectAll
+selectWire 0.0000 -0.1300 240.6700 0.1300 1 VDD
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage -1 0
+panPage -1 0
+fit
+deselectAll
+zoomBox 78.400 -3.526 98.118 7.254
+selectWire 0.2500 0.2500 240.4200 1.2500 5 VDD
+fit
+deselectAll
+windowSelect 123.885 -3.526 143.866 4.888
+windowSelect 140.711 -4.314 165.425 23.555
+windowSelect 149.387 -1.422 115.208 7.780
+zoomBox 116.260 -1.422 145.444 8.043
+deselectAll
+selectWire 0.0000 -0.1300 240.6700 0.1300 1 VDD
+deleteSelectedFromFPlan
+fit
+windowSelect 94.701 163.425 97.330 160.797
+zoomBox 97.330 163.425 109.424 146.073
+selectWire 1.7500 157.1500 238.9200 158.1500 5 VSS
+deselectAll
+selectWire 1.7500 157.1500 238.9200 158.1500 5 VSS
+deselectAll
+selectWire 1.7500 157.1500 238.9200 158.1500 5 VSS
+deselectAll
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 0 -1
+panPage 0 -1
+panPage 0 1
+panPage 0 1
+uiSetTool obstruct
+uiSetTool obstruct
+createPlaceBlockage -box 240.383 -0.244 241.213 160.079
+createPlaceBlockage -box -0.108 -0.115 240.980 2.713
+createPlaceBlockage -box 4.094 -1.463 6.221 1.546
+createPlaceBlockage -box -0.282 -0.140 0.542 160.110
+createPlaceBlockage -box -0.251 157.486 0.970 160.293
+createPlaceBlockage -box -0.129 156.876 0.848 160.812
+createPlaceBlockage -box 0.054 157.669 240.970 160.019
+deleteSelectedFromFPlan
+createPlaceBlockage -box 235.691 156.234 235.812 156.540
+uiSetTool select
+selectObstruct 235.3400 154.9800 236.1600 157.8500 defScreenName
+deleteSelectedFromFPlan
+selectObstruct 0.0000 154.9800 240.6700 157.8500 defScreenName
+deleteSelectedFromFPlan
+uiSetTool obstruct
+createPlaceBlockage -box -0.553 157.303 242.465 160.598
+uiSetTool select
+selectObstruct 0.0000 154.9800 240.6700 157.8500 defScreenName
+deleteSelectedFromFPlan
+windowSelect -1.743 157.944 241.004 161.148
+deselectAll
+windowSelect 241.523 157.974 239.814 159.500
+uiSetTool obstruct
+createPlaceBlockage -box -1.349 158.462 241.736 160.171
+createPlaceBlockage -box 4.540 158.035 4.998 158.279
+createPlaceBlockage -box 4.143 157.791 4.234 158.188
+deleteSelectedFromFPlan
+deleteSelectedFromFPlan
+uiSetTool select
+selectObstruct 4.1000 154.9800 4.5100 157.8500 defScreenName
+deleteSelectedFromFPlan
+windowSelect -0.099 157.882 241.028 160.781
+uiSetTool obstruct
+createPlaceBlockage -box -0.739 157.852 241.028 160.263
+uiSetTool select
+fit
+zoomBox 248.769 29.339 232.468 67.462
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage -1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+panPage 1 0
+fit
+deselectAll
+placeDesign -inPlaceOpt -prePlaceOpt
+addTieHiLo -cell TIELOM -prefix LTIE
+addTieHiLo -cell TIEHIM -prefix HTIE

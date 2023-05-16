@@ -1,0 +1,36 @@
+[05/16 14:43:26     0s] 
+[05/16 14:43:26     0s] Cadence Innovus(TM) Implementation System.
+[05/16 14:43:26     0s] Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+[05/16 14:43:26     0s] 
+[05/16 14:43:26     0s] Version:	v15.20-p005_1, built Wed Nov 11 11:16:39 PST 2015
+[05/16 14:43:26     0s] Options:	
+[05/16 14:43:26     0s] Date:		Tue May 16 14:43:26 2023
+[05/16 14:43:26     0s] Host:		IC (x86_64 w/Linux 2.6.32-573.el6.x86_64) (2cores*8cpus*Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz 6144KB)
+[05/16 14:43:26     0s] OS:		Red Hat Enterprise Linux Server release 6.7 (Santiago)
+[05/16 14:43:26     0s] 
+[05/16 14:43:26     0s] License:
+[05/16 14:43:27     1s] 		invs	Innovus Implementation System	15.2	Denied
+[05/16 14:43:27     1s] 		invsb	Innovus Implementation System Basic	15.2	Denied
+[05/16 14:43:27     1s] 		fexl	First Encounter XL	15.2	checkout succeeded
+[05/16 14:43:27     1s] 		2 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[05/16 14:43:56    17s] @(#)CDS: Innovus v15.20-p005_1 (64bit) 11/11/2015 11:16 (Linux 2.6.18-194.el5)
+[05/16 14:43:56    17s] @(#)CDS: NanoRoute 15.20-p005_1 NR151028-1715/15_20-UB (database version 2.30, 298.6.1) {superthreading v1.26}
+[05/16 14:43:56    17s] @(#)CDS: AAE 15.20-p002 (64bit) 11/11/2015 (Linux 2.6.18-194.el5)
+[05/16 14:43:56    17s] @(#)CDS: CTE 15.20-p001_1 () Oct 29 2015 01:50:39 ( )
+[05/16 14:43:56    17s] @(#)CDS: SYNTECH 15.20-b002_1 () Oct 20 2015 02:35:29 ( )
+[05/16 14:43:56    17s] @(#)CDS: CPE v15.20-p002
+[05/16 14:43:56    17s] @(#)CDS: IQRC/TQRC 15.1.2-s269 (64bit) Mon Aug 24 18:22:18 PDT 2015 (Linux 2.6.18-194.el5)
+[05/16 14:43:56    17s] @(#)CDS: OA 22.50-p028 Thu Jul 23 14:59:57 2015
+[05/16 14:43:56    17s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[05/16 14:43:56    17s] @(#)CDS: RCDB 11.6
+[05/16 14:43:56    17s] --- Running on IC (x86_64 w/Linux 2.6.32-573.el6.x86_64) (2cores*8cpus*Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz 6144KB) ---
+[05/16 14:43:56    17s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_24361_IC_IC_5khP7m.
+
+[05/16 14:43:59    19s] 
+[05/16 14:43:59    19s] **INFO:  MMMC transition support version v31-84 
+[05/16 14:43:59    19s] 
+[05/16 14:43:59    20s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[05/16 14:43:59    20s] <CMD> suppressMessage ENCEXT-2799
+[05/16 14:44:00    20s] <CMD> getDrawView
+[05/16 14:44:00    20s] <CMD> loadWorkspace -name Physical
+[05/16 14:44:00    21s] <CMD> win

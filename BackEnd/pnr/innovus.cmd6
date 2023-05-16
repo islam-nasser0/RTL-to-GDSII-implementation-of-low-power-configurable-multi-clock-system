@@ -1,0 +1,225 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Mon Sep 19 02:10:24 2022                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v15.20-p005_1 (64bit) 11/11/2015 11:16 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 15.20-p005_1 NR151028-1715/15_20-UB (database version 2.30, 298.6.1) {superthreading v1.26}
+#@(#)CDS: AAE 15.20-p002 (64bit) 11/11/2015 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 15.20-p001_1 () Oct 29 2015 01:50:39 ( )
+#@(#)CDS: SYNTECH 15.20-b002_1 () Oct 20 2015 02:35:29 ( )
+#@(#)CDS: CPE v15.20-p002
+#@(#)CDS: IQRC/TQRC 15.1.2-s269 (64bit) Mon Aug 24 18:22:18 PDT 2015 (Linux 2.6.18-194.el5)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getDrawView
+loadWorkspace -name Physical
+win
+set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+set _timing_save_restore_compression_mode hybrid
+set conf_qxconf_file NULL
+set conf_qxlib_file NULL
+set defHierChar /
+set distributed_client_message_echo 1
+set distributed_mmmc_disable_reports_auto_redirection 0
+set gpsPrivate::dpgNewAddBufsDBUpdate 1
+set gpsPrivate::lsgEnableNewDbApiInRestruct 1
+set init_gnd_net VSS
+set init_lef_file {../../../../Labs/Lab_PNR_1/std_cells/lef/tsmc13fsg_6lm_tech.lef ../../../../Labs/Lab_PNR_1/std_cells/lef/tsmc13_m_macros.lef SYS_TOP.lef}
+set init_mmmc_file MMC.tcl
+set init_pwr_net VDD
+set init_top_cell SYS_TOP
+set init_verilog ../DFT/netlists/SYS_TOP.v
+set latch_time_borrow_mode max_borrow
+set lsgOCPGainMult 1.000000
+set pegDefaultResScaleFactor 1.000000
+set pegDetailResScaleFactor 1.000000
+set report_inactive_arcs_format {from to when arc_type sense reason}
+set timing_library_float_precision_tol 0.000010
+set timing_library_load_pin_cap_indices {}
+set timing_library_write_library_to_directory {}
+set tso_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+init_design
+fit
+fit
+fit
+fit
+fit
+fit
+fit
+fit
+floorPlan -d 240.47 160 0.0 0.0 0.0 0.0
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+fit
+set sprCreateIeRingNets {}
+set sprCreateIeRingLayers {}
+set sprCreateIeRingWidth 1.0
+set sprCreateIeRingSpacing 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+addRing -skip_via_on_wire_shape Noshape -skip_via_on_pin Standardcell -stacked_via_top_layer METAL6 -type core_rings -jog_distance 0.205 -threshold 0.205 -nets {VDD VSS} -follow io -stacked_via_bottom_layer METAL1 -layer {bottom METAL1 top METAL1 right METAL2 left METAL2} -width 0.4 -spacing 0.42 -offset 0.205
+editPushUndo
+windowSelect 146.510 130.787 146.099 117.257
+set sprCreateIeStripeNets {}
+set sprCreateIeStripeLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeSpacing 2.0
+set sprCreateIeStripeThreshold 1.0
+addStripe -skip_via_on_wire_shape Noshape -block_ring_top_layer_limit METAL3 -max_same_layer_jog_length 0.8 -padcore_ring_bottom_layer_limit METAL1 -set_to_set_distance 30 -skip_via_on_pin Standardcell -stacked_via_top_layer METAL6 -padcore_ring_top_layer_limit METAL3 -spacing 0.42 -merge_stripes_value 0.205 -layer METAL2 -block_ring_bottom_layer_limit METAL1 -width 0.4 -nets {VDD VSS } -stacked_via_bottom_layer METAL1
+editPushUndo
+windowSelect 252.959 167.147 295.341 172.820
+windowSelect 259.488 150.772 245.788 141.140
+windowSelect 196.986 159.334 227.060 166.505
+fit
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { METAL1 METAL6 } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { METAL1 METAL6 } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { METAL1 METAL6 }
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+setVerifyGeometryMode -area { 0 0 0 0 } -minWidth true -minSpacing true -minArea true -sameNet true -short true -overlap true -offRGrid false -offMGrid true -mergedMGridCheck true -minHole true -implantCheck true -minimumCut true -minStep true -viaEnclosure true -antenna false -insuffMetalOverlap true -pinInBlkg false -diffCellViol true -sameCellViol false -padFillerCellsOverlap true -routingBlkgPinOverlap true -routingCellBlkgOverlap true -regRoutingOnly false -stackedViasOnRegNet false -wireExt true -useNonDefaultSpacing false -maxWidth true -maxNonPrefLength -1 -error 1000
+verifyGeometry
+setVerifyGeometryMode -area { 0 0 0 0 }
+windowSelect 132.347 26.910 129.967 37.321
+selectWire 0.0000 -0.1300 240.6700 0.1300 1 VDD
+deselectAll
+selectWire 0.0000 -0.1300 240.6700 0.1300 1 VDD
+deselectAll
+selectWire 0.2050 0.2050 240.4650 0.6050 1 VDD
+deselectAll
+selectWire 0.2050 0.2050 240.4650 0.6050 1 VDD
+windowSelect 106.844 -2.623 107.460 -2.579
+fit
+selectWire 0.0000 -0.1300 240.6700 0.1300 1 VDD
+deleteSelectedFromFPlan
+setDrawView ameba
+setDrawView fplan
+setDrawView ameba
+setDrawView place
+setDrawView ameba
+setDrawView fplan
+setDrawView ameba
+fit
+setDrawView ameba
+setDrawView fplan
+uiSetTool sizeBlkg
+addSizeBlockage -box 240.568 126.906 240.660 130.656
+deleteSelectedFromFPlan
+deleteSelectedFromFPlan
+deleteSelectedFromFPlan
+deleteSelectedFromFPlan
+fit
+fit
+addSizeBlockage -box -153.371 -94.838 124.316 -87.118
+fit
+fit
+addSizeBlockage -box 261.651 37.752 278.478 73.246
+deleteSelectedFromFPlan
+deleteSelectedFromFPlan
+deleteSelectedFromFPlan
+deleteSelectedFromFPlan
+addSizeBlockage -box 262.440 44.851 276.638 48.794
+deleteSelectedFromFPlan
+deleteSelectedFromFPlan
+deleteSelectedFromFPlan
+deleteSelectedFromFPlan
+deleteSelectedFromFPlan
+addSizeBlockage -box 270.695 56.156 272.694 62.466
+uiSetTool sizeBlkg
+deleteSelectedFromFPlan
+deleteSelectedFromFPlan
+addSizeBlockage -box 268.067 43.799 272.536 51.950
+addSizeBlockage -box 252.849 10.811 304.504 94.326
+uiSetTool select
+uiSetTool select
+uiSetTool select
+uiSetTool select
+uiSetTool select
+windowSelect 335.125 124.638 247.900 -5.273
+deleteSelectedFromFPlan
+fit
+verifyConnectivity -type all -error 1000 -warning 50
+fit
+fit
+placeDesign -inPlaceOpt -prePlaceOpt
+addTieHiLo -cell TIELOM -prefix LTIE
+addTieHiLo -cell TIEHIM -prefix HTIE
+fit
