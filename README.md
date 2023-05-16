@@ -26,7 +26,7 @@
 
 ###Technology node: 130nm
 
-### picture from INNOVUS
+### Picture from INNOVUS
 
 
 
