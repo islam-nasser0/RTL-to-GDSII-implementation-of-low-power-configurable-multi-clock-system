@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : SYS_TOP
+Version: K-2015.06
+Date   : Sun Aug 21 03:47:15 2022
+****************************************
+
+
+   max_transition
+
+                             Required        Actual
+   Net                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   UART_TX_O                    1.50          37.43         -35.93  (VIOLATED)
+       PIN :   U16/Y            1.50          37.43         -35.93  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      1                 -35.93  
+
+   max_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   UART_TX_O                    3.69          75.03         -71.34  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      1                 -71.34  
+
+1
