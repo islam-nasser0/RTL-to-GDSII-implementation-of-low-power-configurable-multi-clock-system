@@ -3,9 +3,9 @@
 ![system](https://user-images.githubusercontent.com/111699435/209229222-9930fb92-f732-47b5-abad-f26a671a6741.PNG)
 ## the block diagram for all the system 
 
-Tools: Synopsis design compiler, Formality, DFT compiler, INNOVUS (Cadence), TCL.
+###Tools: Synopsis design compiler, Formality, DFT compiler, INNOVUS (Cadence), TCL.
 
-phases: 
+###phases: 
 
 -Set constrains to the design (system clock at 50Mhz and UART clock at 912khz)
 
@@ -21,7 +21,9 @@ phases:
 
 -Run global and detailed routing and STA to close the timing then DRCs
 
-Technology node: 130nm
+###Technology node: 130nm
+
+### picture from INNOVUS
 
 
 
