@@ -3,9 +3,11 @@
 ![system](https://user-images.githubusercontent.com/111699435/209229222-9930fb92-f732-47b5-abad-f26a671a6741.PNG)
 ## the block diagram for all the system 
 
-### Tools: Synopsis design compiler, Formality, DFT compiler, INNOVUS (Cadence), TCL.
+## Tools: Synopsis design compiler, Formality, DFT compiler, INNOVUS (Cadence), TCL.
+## work flow :
+ I write the RTL in Verilog , simulate on modelSim througn testbench to check the functionality then go ASIC Flow 
 
-### phases: 
+### ASIC Phases: 
 
 -Set constrains to the design (system clock at 50Mhz and UART clock at 912khz)
 
