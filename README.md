@@ -3,9 +3,9 @@
 
 # work flow :
 
- ## I write the RTL in Verilog , 
- ## simulate on modelSim througn testbench to check the functionality 
- ## then go ASIC Flow
+ ## 1-I write the RTL in Verilog , 
+ ## 2-simulate on modelSim througn testbench to check the functionality 
+ ## 3-then go ASIC Flow
 
 # Technology node: 130nm
 
