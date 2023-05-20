@@ -7,7 +7,7 @@
  simulate on modelSim througn testbench to check the functionality 
  then go ASIC Flow
 
-### Technology node: 130nm
+# Technology node: 130nm
 
 
 ## the block diagram for all the system 
