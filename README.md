@@ -7,6 +7,9 @@
  simulate on modelSim througn testbench to check the functionality 
  then go ASIC Flow
 
+### Technology node: 130nm
+
+
 ## the block diagram for all the system 
 
 ![system](https://user-images.githubusercontent.com/111699435/209229222-9930fb92-f732-47b5-abad-f26a671a6741.PNG)
@@ -50,9 +53,4 @@ TCL.
 
 ![image](https://github.com/islam-nasser0/RTL-to-GDSII-implementation-of-low-power-configurable-multi-clock-system/assets/111699435/96e4758d-24e6-46f2-a019-f8384589f6e6)
 
-### Technology node: 130nm
 
-### Picture from INNOVUS
-
-
-![056591dff08a7634554127f99e6716b2](https://github.com/islam-nasser0/RTL-to-GDSII-implementation-of-low-power-configurable-multi-clock-system/assets/111699435/ec9675db-ae7a-4793-bedd-46e6f670473b)
