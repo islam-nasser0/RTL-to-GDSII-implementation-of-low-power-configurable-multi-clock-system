@@ -1,11 +1,11 @@
 # RTL-to-GDSII-implementation-of-low-power-configurable-multi-clock-system
 
 
-## work flow :
+# work flow :
 
- I write the RTL in Verilog , 
- simulate on modelSim througn testbench to check the functionality 
- then go ASIC Flow
+ ## I write the RTL in Verilog , 
+ ## simulate on modelSim througn testbench to check the functionality 
+ ## then go ASIC Flow
 
 # Technology node: 130nm
 
