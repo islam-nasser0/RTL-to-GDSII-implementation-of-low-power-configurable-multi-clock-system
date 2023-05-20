@@ -3,7 +3,7 @@
 
 # work flow :
 
- ## 1-I write the RTL in Verilog , 
+ ## 1-write the RTL in Verilog , 
  ## 2-simulate on modelSim througn testbench to check the functionality 
  ## 3-then go ASIC Flow
 
